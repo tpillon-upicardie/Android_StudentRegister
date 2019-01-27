@@ -10,6 +10,7 @@ import com.tpillon.schoolapplication.Managers.ProcessBar.IProgressBarManager;
 import com.tpillon.schoolapplication.Managers.ProcessBar.ProgressBarManager;
 import com.tpillon.schoolapplication.Managers.SendService.ISendServiceManager;
 import com.tpillon.schoolapplication.Managers.SendService.SendServiceManager;
+import com.tpillon.schoolapplication.Models.Student;
 import com.tpillon.schoolapplication.R;
 
 public class SendFragment extends Fragment {
