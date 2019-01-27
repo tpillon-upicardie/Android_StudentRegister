@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:columnCount="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="0,1">
+        <TableRow android:layout_height="wrap_content">
+            <fragment android:name="com.tpillon.schoolapplication.Views.Fragments.FormFragment"
+                android:id="@+id/formFragmentContainer"
+                android:layout_height="wrap_content"/>
+            <fragment android:name="com.tpillon.schoolapplication.Views.Fragments.SendFragment"
+                android:id="@+id/sendFragmentContainer"
+                android:layout_height="match_parent"/>
+        </TableRow>
+    </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

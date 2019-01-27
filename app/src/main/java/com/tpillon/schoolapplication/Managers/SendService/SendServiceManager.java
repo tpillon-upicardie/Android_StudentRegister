@@ -1,22 +1,24 @@
 package com.tpillon.schoolapplication.Managers.SendService;
 
-import com.tpillon.schoolapplication.Managers.Notifications.*;
-import com.tpillon.schoolapplication.Managers.Save.*;
+import android.content.Context;
+
 import com.tpillon.schoolapplication.Managers.ProcessBar.*;
+import com.tpillon.schoolapplication.Models.Student;
 
 public class SendServiceManager implements ISendServiceManager {
 
-    private final INotificationsManager _notificationsManager;
-    private final ISaveManager _saveManager;
-    private final IProcessBarManager _processBarManager;
-    private final SendAsyncTask _sendAsyncTask;
 
-    public SendServiceManager(IProcessBarManager processBarManager){
-        _processBarManager = processBarManager;
+    private final IProgressBarManager _processBarManager;
+    private final Context _context;
 
-        _notificationsManager = new NotificationsManager();
-        _saveManager = new SaveManager();
-        _sendAsyncTask = new SendAsyncTask();
+    public SendServiceManager(IProgressBarManager processBarManager, Context context){
+        _context=context;
+        _processBarManager=processBarManager;
+    }
+
+    public void store(Student student){
+        SendAsyncTask sendAsyncTask= new SendAsyncTask(_processBarManager, _context);
+        sendAsyncTask.execute(student);
     }
 
 }

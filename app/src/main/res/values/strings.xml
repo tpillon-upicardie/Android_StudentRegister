@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SchoolApplication</string>
+    <string name="StudentIsRegistered">Student is registered</string>
+    <string name="chanelName">chanel Name</string>
 </resources>
