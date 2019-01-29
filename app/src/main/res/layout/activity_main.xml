@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Views.Activities.MainActivity">
 
+
+    <fragment
+        android:name="com.tpillon.schoolapplication.Views.Fragments.FormFragment"
+        android:id="@+id/fragmentBag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
 </android.support.constraint.ConstraintLayout>

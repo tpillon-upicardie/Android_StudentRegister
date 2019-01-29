@@ -1,5 +1,6 @@
 package com.tpillon.schoolapplication.Views.Activities;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         // collect fragement
         //SOURCE : https://developer.android.com/guide/components/fragments
         // SOURCE lifecycle : https://i.stack.imgur.com/fRxIQ.png
-
+        FragmentManager manager=getSupportFragmentManager();
+        _formFragment = (FormFragment) manager.findFragmentById(R.id.fragmentBag);
     }
 }
