@@ -12,7 +12,7 @@
         android:orientation="vertical">
         <fragment android:name="com.tpillon.schoolapplication.Views.Fragments.FormFragment"
             android:id="@+id/formFragmentContainer"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_width="match_parent"/>
         <fragment android:name="com.tpillon.schoolapplication.Views.Fragments.SendFragment"
             android:id="@+id/sendFragmentContainer"

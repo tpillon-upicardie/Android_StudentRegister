@@ -4,6 +4,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import com.tpillon.schoolapplication.Models.Student;
 import com.tpillon.schoolapplication.R;
@@ -48,5 +50,8 @@ public class MainActivity extends AppCompatActivity {
     public void clickToSend(View view) {
         Student student =  _formFragment.collectData();
         _sendFragment.send(student);
-    }
+
+        Animation shakeAnim = AnimationUtils.loadAnimation(this, R.anim.shake);
+        view.startAnimation(shakeAnim);
+        }
 }

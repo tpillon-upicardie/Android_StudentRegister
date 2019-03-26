@@ -10,6 +10,11 @@ public class ProgressBarManager implements IProgressBarManager {
      */
     private ProgressBar _bar;
 
+    public ProgressBarManager( ProgressBar bar) {
+        _bar=bar;
+        hideBar();
+    }
+
     @Override
     public void setValue(int value) {
         _bar.setProgress(value);

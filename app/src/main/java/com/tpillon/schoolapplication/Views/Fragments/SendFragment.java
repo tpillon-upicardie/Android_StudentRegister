@@ -18,26 +18,22 @@ public class SendFragment extends Fragment {
     /**
      * manager to update progress bar
      */
-    private final ProgressBarManager _progressBarManager;
+    private ProgressBarManager _progressBarManager;
 
     /**
      * manager to store student
      */
-    private final ISendServiceManager _sendManager;
+    private ISendServiceManager _sendManager;
 
-    public  SendFragment(){
-        _progressBarManager = new ProgressBarManager();
-        _sendManager = new SendServiceManager(_progressBarManager, getContext());
-    }
-    
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.send_fragment, container, false);
 
         ProgressBar bar=view.findViewById(R.id.progessBar);
-        _progressBarManager.setBar(bar);
-        _progressBarManager.hideBar();
+
+        _progressBarManager = new ProgressBarManager(bar);
+        _sendManager = new SendServiceManager(_progressBarManager, getContext());
 
         return  view;
     }

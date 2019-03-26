@@ -1,5 +1,6 @@
 package com.tpillon.schoolapplication.Managers.Notifications;
 
+import android.support.v4.app.NotificationCompat;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
